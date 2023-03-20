@@ -1,12 +1,12 @@
-import MyTable from "./MyTable.vue";
-import MyButton from "./MyButton.vue";
+import MyTable from "./table/MyTable.vue";
+import MyTransfer from "./transfer/MyTransfer.vue";
 
 const component = {
 	MyTable,
-	MyButton,
+	MyTransfer,
 };
 
-export { MyTable, MyButton };
+export { MyTable, MyTransfer };
 
 export default {
 	install(app) {

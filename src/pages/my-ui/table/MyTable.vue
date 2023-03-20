@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import EditInput from "./components/EditInput.vue";
+import EditInput from "./EditInput.vue";
 import { defineProps, defineEmits, toRefs, createApp, reactive } from "vue";
 
 //判断input输入框存不存在

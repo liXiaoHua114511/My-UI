@@ -1,11 +1,12 @@
 <template>
 	<div>
 		<MyTable :data="tableDate" @submit="editData"></MyTable>
+		<MyTransfer :data="transDate" right-title="已选择"></MyTransfer>
 	</div>
 </template>
 
 <script setup>
-import { MyTable } from "./my-ui/index.js";
+// import { MyTable,MyTransfer } from "./my-ui/index.js";
 import { reactive } from "vue";
 
 const tableDate = reactive({
@@ -76,6 +77,59 @@ const editData = ({ index, key, value, text }, removeInput) => {
 		}
 	}
 };
+
+const transDate = reactive([
+	{
+		title: "华为",
+		data: [
+			{
+				id: 1,
+				phone_name: "Mate 40 Pro",
+				disabled: false,
+			},
+			{
+				id: 2,
+				phone_name: "P40 Pro",
+				disabled: true,
+			},
+			{
+				id: 3,
+				phone_name: "P50 Pro",
+				disabled: false,
+			},
+			{
+				id: 4,
+				phone_name: "Mate Xs 2",
+				disabled: false,
+			},
+		],
+	},
+	{
+		title: "苹果",
+		data: [
+			{
+				id: 5,
+				phone_name: "iPhone12 Pro",
+				disabled: true,
+			},
+			{
+				id: 6,
+				phone_name: "iPhone13 Pro",
+				disabled: true,
+			},
+			{
+				id: 7,
+				phone_name: "iPhone14 Pro Max",
+				disabled: false,
+			},
+			{
+				id: 8,
+				phone_name: "iPhone11",
+				disabled: false,
+			},
+		],
+	},
+]);
 </script>
 
 <style lang="less" scoped></style>
